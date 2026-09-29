@@ -15,21 +15,10 @@ def PatternCount(text: str, pattern: str) -> int:
     Example:
         PatternCount("AAAA", "AA") returns 3.
     """
-PatternCount(Text, Pattern)
-    count ← 0
-    for i ← 0 to |Text| − |Pattern|
-        if Text(i, |Pattern|) = Pattern
-           count ← count + 1
-    return count
-
-def PatternCount(Text, Pattern):
     count = 0
     # Loop over all possible starting positions of Pattern in Text
-    for i in range(len(Text) - len(Pattern)):
+    for i in range(len(text) - len(pattern)):
         # Check if the substring of length len(Pattern) starting at index i matches Pattern
-        if Text[i : i + len(Pattern)] == Pattern:
+        if text[i : i + len(pattern)] == pattern:
             count += 1
     return count
-
-    # TODO: Implement this function.
-    raise NotImplementedError("Implement PatternCount")
