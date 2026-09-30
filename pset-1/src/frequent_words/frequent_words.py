@@ -1,6 +1,6 @@
 """Find the most frequent words of a given length in text."""
 
-from pattern_count import PatternCount
+from .pattern_count import PatternCount
 
 
 def FrequentWords(text: str, k: int) -> set[str]:
@@ -32,7 +32,3 @@ def FrequentWords(text: str, k: int) -> set[str]:
             frequent_patterns.add(text[i:(i+k)])
             
     return frequent_patterns
-
-
-text = "hellohihellohiithere"
-print(FrequentWords(text, 5))

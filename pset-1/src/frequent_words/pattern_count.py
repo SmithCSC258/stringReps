@@ -17,7 +17,7 @@ def PatternCount(text: str, pattern: str) -> int:
     """
     count = 0
     # Loop over all possible starting positions of Pattern in Text
-    for i in range(len(text) - len(pattern)):
+    for i in range(len(text) - len(pattern)+1):
         # Check if the substring of length len(Pattern) starting at index i matches Pattern
         if text[i : i + len(pattern)] == pattern:
             count += 1
