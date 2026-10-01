@@ -18,4 +18,17 @@ def FrequentWords(text: str, k: int) -> set[str]:
     PatternCount(text, pattern) directly in your implementation.
     """
     # TODO: Implement this function.
-    raise NotImplementedError("Implement FrequentWords")
+    
+    frequent_patterns = set()
+    count = [0] * (len(text) - k + 1)
+    for i in range(0, len(text) - k +1):
+        pattern = text[i:(i+k)]
+        count[i] = PatternCount(text, pattern)
+        
+    max_count = max(count)
+    
+    for i in range(0, len(text) - k + 1):
+        if count[i] == max_count:
+            frequent_patterns.add(text[i:(i+k)])
+            
+    return frequent_patterns
