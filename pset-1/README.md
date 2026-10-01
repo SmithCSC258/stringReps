@@ -1,4 +1,4 @@
-# Frequent Words — Python package starter
+# Problem Set 1 — Frequent Words
 
 Implement two functions for analyzing text (such as DNA sequences):
 
@@ -30,12 +30,21 @@ match the algorithm names used in class, while using lowercase module names.
 
 ## Set up
 
-Use Python 3.10 or newer. From this repository's root directory:
+To check your work with the notebook, open `in-class-pset1.ipynb` in this
+folder and choose **Run All**. It loads your saved local Python files
+automatically; no package installation or GitHub push is needed for the
+tests. After editing your code, save the files and run all cells again.
+The plotting section requires `matplotlib` in the notebook environment.
+
+For using the package outside the grading notebook, follow the setup below.
+
+Use Python 3.10 or newer. From this repository's root directory (the folder
+containing `pset-1/` and `pset-2/`):
 
 ```sh
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install -e .
+python -m pip install -e ./pset-1
 ```
 
 On Windows, activate with `.venv\Scripts\activate` in Command Prompt or
