@@ -20,7 +20,7 @@ def FrequentWords(text: str, k: int) -> set[str]:
     count :list[int] = []
 
     # count the frequency of the k-mer starting at each index in the sequence
-    for i in range(len(text)-k):
+    for i in range(len(text)-k+1):
         pattern :str = text[i:i+k]
         count.append(PatternCount(text, pattern))
 
