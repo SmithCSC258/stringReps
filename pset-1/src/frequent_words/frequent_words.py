@@ -1,10 +1,6 @@
 """Find the most frequent words of a given length in text."""
 
-#from .pattern_count import PatternCount
-
-def PatternCount(a, b):
-    return 0
-
+from .pattern_count import PatternCount
 
 def FrequentWords(text: str, k: int) -> set[str]:
     """Return all length-k substrings with the highest occurrence count.
@@ -25,11 +21,11 @@ def FrequentWords(text: str, k: int) -> set[str]:
 
     # count the frequency of the k-mer starting at each index in the sequence
     for i in range(len(text)-k):
-        pattern = text[i:i+k]
+        pattern :str = text[i:i+k]
         count.append(PatternCount(text, pattern))
 
     # find the maximum frequency of k-mers
-    maxCount = max(count)
+    maxCount :int = max(count)
 
     # find all the k-mers that appear with maximum frequency
     for i in range(len(text)-k):
