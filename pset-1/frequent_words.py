@@ -29,6 +29,7 @@ def FrequentWords(text: str, k: int) -> set[str]:
     # find top int in count
     maxVal = sorted(count.values(), reverse=True)[0]
 
+    # add all patterns with top count to frequentPatterns
     for i in count.keys():
         if maxVal == count.get(i):
             frequentPatterns.add(i)
