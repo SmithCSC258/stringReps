@@ -1,5 +1,5 @@
 from email.mime import text
-from frequent_words import FrequentWords as inclass_frequent_words
+# from frequent_words import FrequentWords as inclass_frequent_words
 
 def frequentWords(text: str, k: int) -> set[str]:
     # 1. Handle edge cases to prevent max() errors on empty lists
@@ -11,11 +11,11 @@ def frequentWords(text: str, k: int) -> set[str]:
     
     # 2. Count occurrences using the in-class PatternCount function 
     # (Assuming it's available or called via the aliased module context)
-    from .pattern_count import PatternCount
+    from .pattern_count import patternCount
     
     for i in range(0, len(text) - k + 1):
         pattern = text[i:(i+k)]
-        count[i] = PatternCount(text, pattern)
+        count[i] = patternCount(text, pattern)
         
     max_count = max(count)
     
