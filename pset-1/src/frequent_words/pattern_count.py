@@ -10,5 +10,16 @@ def PatternCount(text: str, pattern: str) -> int:
     Example:
         PatternCount("AAAA", "AA") returns 3.
     """
-    # TODO: Implement this function.
-    raise NotImplementedError("Implement PatternCount")
+
+    count = 0
+    for i in range(0, text.__len__()):
+        if pattern == text[i:i+pattern.__len__()]:
+            count += 1
+    return count
+
+def main():
+
+    print(PatternCount("AAAA", "AA"))
+
+if __name__ == "__main__":
+    main()
