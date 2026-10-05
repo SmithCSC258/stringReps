@@ -1,6 +1,6 @@
 """Find the most frequent words of a given length in text."""
 
-from .pattern_count import PatternCount
+from pattern_count import PatternCount
 
 
 def FrequentWords(text: str, k: int) -> set[str]:
@@ -17,5 +17,29 @@ def FrequentWords(text: str, k: int) -> set[str]:
     PatternCount is already imported above. You can call
     PatternCount(text, pattern) directly in your implementation.
     """
-    # TODO: Implement this function.
-    raise NotImplementedError("Implement FrequentWords")
+    frequentPatterns = set()
+    count = dict()
+
+    for i in range(0, text.__len__()-k+1):
+        pattern = text[i:i+k]
+        if pattern not in count.keys(): # if pattern is not in dictionary:
+            # add pattern and it's count
+            count.update({pattern: PatternCount(text, pattern)})
+    
+    # find top int in count
+    maxVal = sorted(count.values(), reverse=True)[0]
+
+    for i in count.keys():
+        if maxVal == count.get(i):
+            frequentPatterns.add(i)
+
+    return frequentPatterns
+
+
+def main():
+
+    print(FrequentWords("ATAT", 2))
+    print(FrequentWords("ATGC", 2))
+
+if __name__ == "__main__":
+    main()
