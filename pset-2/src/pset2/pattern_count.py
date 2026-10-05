@@ -1,4 +1,4 @@
-from itertools import count
+#from itertools import count
 
 def patternCount(text: str, pattern: str) -> int:
     """Count occurrences of a pattern in text.
