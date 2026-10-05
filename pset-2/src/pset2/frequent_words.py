@@ -3,6 +3,7 @@
 from pattern_count import patternCount
 
 def frequentWords(text: str, k: int) -> set[str]:
+    """consider adding docstring"""
     # 1. Handle edge cases to prevent max() errors on empty lists
     if not text or k > len(text) or k <= 0:
         return set()
