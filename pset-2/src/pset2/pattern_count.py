@@ -1,6 +1,4 @@
-from frequent_words import PatternCount as inclass_pattern_count
-from itertools import count
-from xml.dom.minidom import Text
+#from itertools import count
 
 def patternCount(text: str, pattern: str) -> int:
     """Count occurrences of a pattern in text.

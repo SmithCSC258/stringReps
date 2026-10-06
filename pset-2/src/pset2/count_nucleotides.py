@@ -1,6 +1,5 @@
-#TODO: 
-### This is a rosalind dataset example! 
 def countNucleotides(text: str) -> dict[str, int]:
+    """consider adding docstring"""
     # Count each nucleotide inside the function
     count_a = text.count("A")
     count_c = text.count("C")

@@ -1,7 +1,9 @@
-from email.mime import text
-from frequent_words import FrequentWords as inclass_frequent_words
+# from email.mime import text
+# from frequent_words import FrequentWords as inclass_frequent_words
+from pattern_count import patternCount
 
 def frequentWords(text: str, k: int) -> set[str]:
+    """consider adding docstring"""
     # 1. Handle edge cases to prevent max() errors on empty lists
     if not text or k > len(text) or k <= 0:
         return set()
@@ -11,11 +13,11 @@ def frequentWords(text: str, k: int) -> set[str]:
     
     # 2. Count occurrences using the in-class PatternCount function 
     # (Assuming it's available or called via the aliased module context)
-    from .pattern_count import PatternCount
+    
     
     for i in range(0, len(text) - k + 1):
         pattern = text[i:(i+k)]
-        count[i] = PatternCount(text, pattern)
+        count[i] = patternCount(text, pattern)
         
     max_count = max(count)
     
