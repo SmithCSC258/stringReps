@@ -23,7 +23,7 @@ def FrequentWords(text: str, k: int) -> set[str]:
     for i in range(0, text.__len__()-k+1):
         pattern = text[i:i+k]
         if pattern not in count.keys(): # if pattern is not in dictionary:
-            # add pattern and it's count
+            # add pattern and it's count # how are you updating occurences that are already in the dictionary?
             count.update({pattern: PatternCount(text, pattern)})
     
     # find top int in count
