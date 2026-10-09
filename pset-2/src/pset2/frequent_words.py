@@ -1,7 +1,7 @@
 from frequent_words import FrequentWords as inclass_frequent_words
 
 
-def frequentWords(text: str, k: int) -> set[str]:
+def frequentWords(text: str, k: int) -> dict:
     freqDic = {}
     for i in range(len(text)- k + 1):
         pattern = text[i:i+k]
@@ -9,7 +9,7 @@ def frequentWords(text: str, k: int) -> set[str]:
         if pattern not in freqDic:
             freqDic[pattern] = 1
         else:
-            freqDic[pattern] = +1
+            freqDic[pattern] += 1
     
     max_count = max(freqDic.values())
 
