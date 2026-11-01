@@ -1,12 +1,13 @@
 # Problem Set 3
 
+Due date: Friday, October 23, 2026.
+
 This assignment lives in `pset-3/` within your existing `stringReps`
 repository, alongside `pset-1/` and `pset-2/`. Use the same repository for
 your work; you do not need to create a separate repository.
 
-Implement the four functions below in the assigned order. Each starter function
-contains a TODO and raises `NotImplementedError` until you implement it.
-Keep the function signatures and package exports as provided.
+The four functions below are listed in the assigned order. Keep the function
+signatures and package exports as provided.
 
 | Order | Function | File | Rosalind problem |
 | --- | --- | --- | --- |
@@ -48,8 +49,8 @@ from pset3 import frequencyArray, transcribeRNA, reverseComplement, findClumps
 
 ## Sample calls and expected results
 
-These calls use the samples from the linked Rosalind pages. They will raise
-`NotImplementedError` until you complete the corresponding functions.
+These calls use the samples from the linked Rosalind pages. Use them to check
+the corresponding functions.
 
 ```python
 frequencyArray("ACGCGGCTCTGAAA", 2)
